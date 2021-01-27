@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кузовной ремонт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+<body> 
+
+    <section class="parent">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__logo"><img src="img/logo.svg" alt="logo" width="57px" height="57px"></div>
+                        <div class="header__phone">
+                            <span class="header__phone-number">8 800 232 32 12</span>
+                            <a href="#" class="header__phone-link" data-modal="#order">Заказать обратный звонок</a>
+                        </div>
+                </div>
+            </div>
+        </header>
+
+    <div class="main">
+
+        <h1 class="main__title wow fadeInLeft" data-wow-delay="0.2s">Продажа кузовных запчастей</h1>
+        <span class="main__suptitle">с заводской покраской без пробега по РФ</span>
+
+        <div class="main__service">
+            <div class="main__service-card wow fadeInUp" data-wow-delay="0.2s">
+                <img src="img/main-service/1.png" alt="delivery">
+                <span class="main__service-title">Доставка по РФ от 3-х дней</span>
+            </div>
+            <div class="main__service-card wow fadeInUp" data-wow-delay="0.3s">
+                <img src="img/main-service/2.png" alt="new conditions">
+                <span class="main__service-title main__service-title--two">Новое состояние по цене б/у</span>
+            </div>
+            <div class="main__service-card wow fadeInUp" data-wow-delay="0.4s">
+                <img src="img/main-service/3.png" alt="details">
+                <span class="main__service-title">Наличие более 500 различных деталей</span>
+            </div>
+        </div>
+
+        <div class="main__buttons">
+            <div class="main__button-wrapper">
+                <button class="btn main__button" data-modal="#quick">Быстрая заявка</button>
+                <span class="main-button-text">Мы перезвоним Вам <br>для уточнения деталей.</span>
+            </div>
+            <div class="main__button-wrapper">
+                <button class="btn main__button">Подробная заявка</button>
+                <span class="main-button-text">Заполните подробную <br>заявку онлайн!</span>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+    <div class="advantages">
+        <div class="container">
+            <div class="advantages__wrapper">
+                <div class="advantages__card wow zoomIn" data-wow-delay="0.2s">
+            <img src="img/advantages/1.png" alt="names">
+            <h3 class="advantages__card-title">Более 1000 наименований</h3>
+            <p class="advantages__card-text">Возможность заказа и подбора более чем по 2000 наименований деталей</p>
+        </div>
+        <div class="advantages__card wow zoomIn" data-wow-delay="0.3s">
+            <img src="img/advantages/2.png" alt="delivery">
+            <h3 class="advantages__card-title">Доставка в любой регион РФ</h3>
+            <p class="advantages__card-text">Мы работаем с любой транспортной компанией и осуществляем доставку в любой регион РФ</p>
+        </div>
+        <div class="advantages__card wow zoomIn" data-wow-delay="0.4s">
+            <img src="img/advantages/3.png" alt="details">
+            <h3 class="advantages__card-title">Новое состояние деталей</h3>
+            <p class="advantages__card-text">Наши детали не были в употреблении и имеют состояние новых</p>
+        </div>
+        <div class="advantages__card wow zoomIn" data-wow-delay="0.5s">
+            <img src="img/advantages/4.png" alt="quality">
+            <h3 class="advantages__card-title">Европейское качество</h3>
+            <p class="advantages__card-text">Все наши детали привезены из Европы, что гарантирует отличное качество</p>
+        </div>
+        <div class="advantages__card wow zoomIn" data-wow-delay="0.6s">
+            <img src="img/advantages/5.png" alt="agreement">
+            <h3 class="advantages__card-title">Работаем по договору</h3>
+            <p class="advantages__card-text">Все, что мы делаем - официально. Мы заключаем договор купли-продажи и предоставляем все необходимые документы</p>
+        </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="application">
+        <div class="container">
+            <div class="application__title-wrapper">
+                <h2 class="application__title wow slideInDown" data-wow-delay="0.2s">Подробная заявка</h2>
+                <span class="application__suptitle">Заполните форму и получите максимально точную цену!</span>
+            </div>
+            <form method="POST" class="application__form" id="head-form">
+                <div class="application__form-wrapper">
+
+                    <div class="application__form-first">
+                        <span class="form-title">Марка:</span>
+                        <select name="mark" class="form-select" required>
+                            <option selected class="form__option">Выберите марку</option>
+                            <option value="Nissan">Nissan</option>
+                        </select>
+                        <span class="form-title">Модель</span>
+                        <select name="model" class="form-select" required>
+                            <option selected>Выберите модель</option>
+                            <option value="W3H">W3H</option>
+                        </select>
+                        <span class="form-title">Год выпуска:</span>
+                        <select name="year" class="form-select">
+                            <option selected>Выберите год</option>
+                            <option value="1976">1976</option>
+                        </select>
+                    </div>
+
+                    <div class="application__form-second">
+                        <span class="form-title">Необходимые детали:</span>
+                        <textarea name="details" id="details" rows="7" placeholder="Введите" required></textarea>
+                        <span class="form-title">Ваше имя:</span>
+                        <input type="text" placeholder="Введите" class="form-name" required>
+                    </div>
+
+                    <div class="application__form-third">
+                        <span class="form-title">Ваш телефон:</span>
+                        <input type="tel" class="form-tel" id="phone" required>
+                        <span class="form-title">Ваш e-mail:</span>
+                        <input type="email" placeholder="Введите" class="form-email"> 
+                        <button type="submit" class="btn form-button" data-modal="#thanks" form="head-form">Узнать цену</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="details">
+        <div class="container">
+            <h2 class="details__title wow slideInDown" data-wow-delay="0.2s">Имеем в наличии детали на авто:</h2>
+            <div class="details__wrapper">
+                <div class="details__1 details__image wow jackInTheBox" data-wow-delay="0.2s"></div>
+                <div class="details__2 details__image wow jackInTheBox" data-wow-delay="0.2s"></div>
+                <div class="details__3 details__image wow jackInTheBox" data-wow-delay="0.2s"></div>
+                <div class="details__4 details__image wow jackInTheBox" data-wow-delay="0.2s"></div>
+                <div class="details__5 details__image wow jackInTheBox" data-wow-delay="0.2s"></div>
+            </div>
+            <div class="details__wrapper-two">
+                <div class="details__6 details__image wow jackInTheBox" data-wow-delay="0.3s"></div>
+                <div class="details__7 details__image wow jackInTheBox" data-wow-delay="0.3s"></div>
+                <div class="details__8 details__image wow jackInTheBox" data-wow-delay="0.3s"></div>
+                <div class="details__9 details__image wow jackInTheBox" data-wow-delay="0.3s"></div>
+            </div>
+            <div class="details__wrapper-three">
+                <div class="details__10 details__image wow jackInTheBox" data-wow-delay="0.4s"></div>
+                <div class="details__11 details__image wow jackInTheBox" data-wow-delay="0.4s"></div>
+                <div class="details__12 details__image wow jackInTheBox" data-wow-delay="0.4s"></div>
+                <div class="details__13 details__image wow jackInTheBox" data-wow-delay="0.4s"></div>
+            </div>
+                
+        </div>
+    </section>
+
+    <section class="showcar">
+        <div class="container">
+            <h2 class="show__title wow slideInDown" data-wow-delay="0.2s">Вы можете посмотреть что происходит у нас!</h2>
+                <div class="show__wrapper">
+                    <iframe class="show__video" src="https://www.youtube.com/embed/WtF-YlLvh3w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+        </div>
+    </section>
+
+    <section class="aboutus">
+        <div class="container">
+            <h2 class="aboutus__title wow slideInDown" data-wow-delay="0.2s">Клиенты о нас</h2>
+            <div class="aboutus__wrapper">
+                <div class="aboutus__card wow fadeInUpBig" data-wow-delay="0.2s">
+                    <img src="img/aboutus/aboutus.png" alt="" class="aboutus__card-image">
+                    <div class="aboutus__card-content">
+                        <h4 class="aboutus__card-suptitle">Иван Иванович</h4>
+                        <span class="abooutus__card-description">Не могу найти фару для авто</span>
+                        <p class="aboutus__card-text">“Мотордеталь в широком ассортименте по ценам от известного дистрибьютора автозапчастей. ООО "РАДИАТОР" пользуется заслуженным уважением среди покупателей, благодаря высокому сервису, скидкам, отличному качеству продукции.</p>
+                    </div>
+                </div>
+                <div class="aboutus__card wow fadeInUpBig" data-wow-delay="0.4s">
+                    <img src="img/aboutus/aboutus.png" alt="" class="aboutus__card-image">
+                    <div class="aboutus__card-content">
+                        <h4 class="aboutus__card-suptitle">Иван Иванович</h4>
+                        <span class="abooutus__card-description">Не могу найти фару для авто</span>
+                        <p class="aboutus__card-text">“Мотордеталь в широком ассортименте по ценам от известного дистрибьютора автозапчастей. ООО "РАДИАТОР" пользуется заслуженным уважением среди покупателей, благодаря высокому сервису, скидкам, отличному качеству продукции.</p>
+                    </div>
+                </div>
+                <div class="aboutus__card wow fadeInUpBig" data-wow-delay="0.6s">
+                    <img src="img/aboutus/aboutus.png" alt="" class="aboutus__card-image">
+                    <div class="aboutus__card-content">
+                        <h4 class="aboutus__card-suptitle">Иван Иванович</h4>
+                        <span class="abooutus__card-description">Не могу найти фару для авто</span>
+                        <p class="aboutus__card-text">“Мотордеталь в широком ассортименте по ценам от известного дистрибьютора автозапчастей. ООО "РАДИАТОР" пользуется заслуженным уважением среди покупателей, благодаря высокому сервису, скидкам, отличному качеству продукции.</p>
+                    </div>
+                </div>
+                <div class="aboutus__card wow fadeInUpBig" data-wow-delay="0.8s">
+                    <img src="img/aboutus/aboutus.png" alt="" class="aboutus__card-image">
+                    <div class="aboutus__card-content">
+                        <h4 class="aboutus__card-suptitle">Иван Иванович</h4>
+                        <span class="abooutus__card-description">Не могу найти фару для авто</span>
+                        <p class="aboutus__card-text">“Мотордеталь в широком ассортименте по ценам от известного дистрибьютора автозапчастей. ООО "РАДИАТОР" пользуется заслуженным уважением среди покупателей, благодаря высокому сервису, скидкам, отличному качеству продукции.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="consultation">
+        <div class="container">
+            <div class="application__title-wrapper">
+                <h2 class="consultation__title wow slideInDown" data-wow-delay="0.2s">Нужна консультация?</h2>
+                <span class="consultation__suptitle">Заполните форму и получите максимально точную цену!</span>
+            </div>
+            <div class="consultation__form-wrapper">
+                <form action="" method="POST">
+                    <div class="consultation__input-wrapper">
+                        <div class="input-wrap-one">
+                            <span class="consultation__input-title">Ваше имя:</span>
+                            <input type="tel" id="phone-1">
+                        </div>
+                        <div class="input-wrap-two">
+                            <span class="consultation__input-title">Ваш e-mail:</span>
+                            <input type="email">
+                        </div>
+                    </div>
+                    <button class="btn consultation__form-button" type="submit" data-modal="#thanks">Заказать консультацию</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts__wrapper wow zoomIn" data-wow-delay="0.2s">
+                <h3 class="contacts__title">Контакты</h3>
+                <span class="contacts__address">г. Москва, ул. Дорожная, 8, к.1</span>
+                <span class="contacts__phone">8 800 123 43 34</span>
+                <a href="" class="contacts__email">info@sitename.ru</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                    <div class="footer__logo"><img src="img/logo.svg" alt="logo" width="57px" height="57px"></div>
+                        <div class="footer__phone">
+                            <span class="footer__phone-number">8 800 232 32 12</span>
+                            <a href="#" class="footer__phone-link" data-modal="#order">Заказать обратный звонок</a>
+                        </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="order">
+            <div class="modal__dialog">
+                <button type="button" class="modal__close" data-close="">&#10006;</button>
+                <div class="modal__order">
+                    <h3 class="modal__order-title">Заказ обратного звонка</h3>
+                    <span class="modal__suptitle">Оставьте заявку и мы Вам перезвоним!</span>
+                        <input type="text" placeholder="Ваше имя" class="modal__name" required>
+                        <input type="tel" placeholder="Ваш телефон" class="modal__tel" id="phone-3" required>
+                        <input type="email" placeholder="Ваша почта" class="modal__mail">
+                    <button class="btn modal__button" type="submit">Отправить заявку</button>
+                </div>
+            </div>
+    </div>
+
+    <div class="modal" id="thanks">
+            <div class="modal__dialog">
+                <button type="button" class="modal__close" data-close="">&#10006;</button>
+                <div class="modal__order">
+                    <h3 class="modal__order-title-thanks">Спасибо за вашу заявку!</h3>
+                    <span class="modal__suptitle-thanks">Мы свяжемся с Вами в ближайшее  время!</span>
+                </div>
+            </div>
+    </div>
+
+    <div class="modal" id="quick">
+            <div class="modal__dialog">
+                <button type="button" class="modal__close" data-close="">&#10006;</button>
+                <div class="modal__order">
+                    <h3 class="modal__order-title">Быстрая заявка</h3>
+                    <span class="modal__suptitle-quick">Оставьте заявку и мы Вам перезвоним!</span>
+                        <input type="text" placeholder="Ваше имя" class="modal__name" required>
+                        <input type="tel" placeholder="Ваш телефон" class="modal__tel" id="phone-2" required>
+                    <button class="btn modal__button" type="submit">Отправить заявку</button>
+                </div>
+            </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
+
+    <script>
+    new WOW().init();
+    </script>
+
+<script>
+    $(document).ready(function() {
+        $("#phone").mask("+7 (999) 999-99-99");
+        $("#phone-1").mask("+7 (999) 999-99-99");
+        $("#phone-2").mask("+7 (999) 999-99-99");
+    });
+</script>
+
+</body>
+</html>

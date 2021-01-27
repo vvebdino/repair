@@ -1,0 +1,1521 @@
+@font-face {
+    font-family: 'Lato_reg';
+    src: url('../fonts/Lato-Regular.eot');
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato-Regular.woff') format('woff'),
+        url('../fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato_bold';
+    src: url('../fonts/Lato-Bold.eot');
+    src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Bold.woff2') format('woff2'),
+        url('../fonts/Lato-Bold.woff') format('woff'),
+        url('../fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@white: #ffffff;
+@red: #d91233;
+@black: #000000;
+@grey: #222222;
+@light-grey: #ebebeb;
+
+.reg {
+    font-family: 'Lato_reg';
+}
+.bold {
+    font-family: 'Lato_bold';
+}
+
+/*============    ОСНОВНЫЕ    ===========*/
+
+html {
+    font-size: 10px;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    .reg();
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.btn {
+    display: block;
+    background-color: @red;
+    color: @white;
+    transition: .2s linear;
+    outline: none;
+    font-size: 1.3rem;
+    border: none;
+    border: 2px solid @red;
+    .bold();
+
+    &:hover {
+        background-color: transparent;
+        border: 2px solid @red;
+    }
+}
+
+/*============    ШАПКА    ===========*/
+
+.parent {
+    background: url(../img/main-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+.header {
+    padding-top: 2rem;
+    margin-bottom: 120px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__phone-number {
+    color: @white;
+    .bold();
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.header__phone-link {
+    font-size: 1.4rem;
+    text-decoration: underline;
+    color: @red;
+    text-align: right;
+    transition: .2 linear;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+/*============    ГЛАВНЫЙ ЭКРАН    ===========*/
+
+.main {
+    padding-bottom: 9rem;
+    text-align: center;
+}
+
+.main__title {
+    .bold();
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: @white;
+    margin-bottom: 5px;
+}
+
+.main__suptitle {
+    color: @white;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.main__service {
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 9rem;
+    width: 550px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main__service-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    &:first-child {
+        margin-left: 20px;
+    }
+}
+
+.main__service-card img {
+    margin: 0 auto;
+}
+
+.main__service-title {
+    margin-top: 3.2rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: @white;
+
+    &--two {
+    margin-top: 2rem;
+    }
+}
+
+.main__buttons {
+    max-width: 510px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main__button {
+    margin: 0 auto;
+    margin-left: 1.5rem;
+    padding: 1.2rem 5.5rem;
+    border-radius: 2.5rem;
+    width: 230px;
+}
+
+.main-button-text {
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: @white;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/*============    ПРЕИМУЩЕСТВА    ===========*/
+
+.advantages {
+    margin-top: 8rem;
+}
+
+.advantages__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.advantages__card {
+    max-width: 227px;
+    text-align: center;
+    margin-bottom: 8.5rem;
+    margin-left: 5.3rem;
+}
+
+.advantages__card-title {
+    .bold();
+    font-size: 1.5rem;
+    color: @black;
+    margin-top: 3.5rem;
+}
+
+.advantages__card-text {
+    font-size: 1.3rem;
+    color: @black;
+    line-height: 1.2;
+}
+
+
+/*============    ЗАЯВКА    ===========*/
+
+.application {
+    background-color: @light-grey;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.application__title-wrapper {
+    text-align: center;
+    line-height: 1.2;
+    color: @black;
+}
+
+.application__title {
+    font-size: 2.9rem;
+    .bold();
+    margin-bottom: 1.5rem;
+}
+.application__suptitle {
+    .reg();
+    font-size: 1.5rem;
+}
+
+.application__form {
+    border: 5px solid @white;
+    margin-top: 5rem;
+}
+
+.application__form-wrapper {
+    padding: 3rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.application__form-first,
+.application__form-second,
+.application__form-third {
+    display: flex;
+    flex-direction: column;
+    width: 29%;
+}
+
+.form-title {
+    .bold();
+    font-size: 1.3rem;
+    color: @black;
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.select {
+    position: relative;
+}
+
+.form-select {
+    outline: none;
+    padding: 1rem 7rem 1.3rem 2rem;
+    width: 23rem;
+    border: none;
+    appearance: none;
+    background: #fff url(../img/arrow-grey.png) no-repeat;
+    background-position: calc(100% - 20px);
+    font-size: 1.3rem;
+    color: #b8b8b8;
+}
+.form-select option {
+    color: @black;
+}
+
+.application__form-second textarea {
+    height: 12.2rem;
+    width: 23rem;
+    border: none;
+    padding: 1rem 0 0 1.4rem;
+    &::placeholder {
+        font-size: 1.4rem;
+        color: #b8b8b8;
+        line-height: 1.2;
+    }
+}
+
+.form-name {
+    width: 23rem;
+    border: none;
+    padding: 1.2rem 7rem 1.3rem 2rem;
+    &::placeholder {
+        font-size: 1.3rem;
+        color: #b8b8b8;
+        line-height: 1.2;
+    }
+}
+
+.form-tel,
+.form-email {
+    width: 23rem;
+    border: none;
+    padding: 1.2rem 7rem 1.3rem 2rem;
+    &::placeholder {
+        font-size: 1.3rem;
+        color: #b8b8b8;
+        line-height: 1.2;
+    }
+}
+
+.form-button {
+    margin-top: 3.7rem;
+    width: 23rem;
+    padding: 1.3rem 5rem;
+    border-radius: 2.5rem;
+    &:hover {
+        color: @black;
+    }
+}
+
+/*============    ДЕТАЛИ    ===========*/
+
+.details__title {
+    margin-top: 8rem;
+    text-align: center;
+    font-size: 2.9rem;
+    .bold();
+    margin-bottom: 6.5rem;
+}
+
+.details__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 77rem;
+    margin: 0 auto;
+}
+.details__wrapper-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.details__wrapper-three {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.details__image {
+    margin-bottom: 3rem;
+}
+
+.details__1 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/1.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/1.png);
+    }
+}
+
+.details__2 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/2.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/2.png);
+    }
+}
+
+.details__3 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/3.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/3.png);
+    }
+}
+
+.details__4 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/4.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/4.png);
+    }
+}
+
+.details__5 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/5.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/5.png);
+    }
+}
+
+.details__6 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/6.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/6.png);
+    }
+}
+
+.details__7 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/7.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/7.png);
+    }
+}
+
+.details__8 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/8.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/8.png);
+    }
+}
+
+.details__9 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/9.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/9.png);
+    }
+}
+
+.details__10 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/10.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/10.png);
+    }
+}
+
+.details__11 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/11.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/11.png);
+    }
+}
+
+.details__12 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/12.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/12.png);
+    }
+} 
+
+.details__13 {
+    width: 14rem;
+    height: 8rem;
+    display: block;
+    background: url(../img/details/13.png) no-repeat center;
+    transition: .2s linear;
+    &:hover {
+        background-image: url(../img/details_hover/13.png);
+    }
+}
+
+/*============    ПОКАЗ    ===========*/
+
+.showcar {
+    margin-bottom: 7rem;
+}
+
+.show__title {
+    font-size: 2.9rem;
+    color: @black;
+    .bold();
+    line-height: 1.2;
+    text-align: center;
+}
+
+.show__wrapper {
+    margin: 0 auto;
+    margin-top: 6rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 820px;
+    border: 5px solid #f2f2f2;
+    background-color: @white;
+}
+
+.show__video {
+    width: 100%;
+    max-width: 780px; 
+    height: 390px;
+}
+
+/*============    О КОМПАНИИ    ===========*/
+.aboutus {
+    background-color: @light-grey;
+    padding-bottom: 2rem;
+}
+
+.aboutus__title {
+    padding-top: 8rem;
+    font-size: 2.9rem;
+    color: @black;
+    .bold();
+    line-height: 1.2;
+    text-align: center;
+}
+
+.aboutus__wrapper {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.aboutus__card {
+    width: 47%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.aboutus__card-content {
+    margin-left: 2rem;
+}
+
+.aboutus__card-suptitle {
+    font-size: 1.1rem;
+    color: #757575;
+    .bold();
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: 0.8rem;
+}
+
+.abooutus__card-description {
+    font-size: 1.4rem;
+    color: @red;
+    .bold();
+    line-height: 1.2;
+    text-align: left;
+}
+
+.aboutus__card-image {
+    width: 9rem;
+    height: 9rem;
+}
+
+.aboutus__card-text {
+    font-size: 1.1rem;
+    color: #2b2b2b;
+    .bold();
+    line-height: 1.2;
+    text-align: left;
+}
+
+/*============    КОНСУЛЬТАЦИЯ    ===========*/
+
+.consultation {
+    padding: 7rem 0;
+    background-color: #dbdbdb;
+}
+
+.consultation__title {
+    .bold();
+    font-size: 2.9rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.consultation__suptitle {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.consultation__form-wrapper {
+    width: 100%;
+    max-width: 745px;
+    margin: 0 auto;
+    margin-top: 6rem;
+    padding: 5.5rem;
+    border: 5px solid @white;
+}
+
+.consultation__input-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-wrap-one,
+.input-wrap-two {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.consultation input {
+    width: 29rem;
+    padding: 1.3rem 1rem;
+    border: none;
+}
+
+.consultation__form-button {
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 1.1rem 5.5rem 1.4rem;
+    border-radius: 2.5rem;
+    font-size: 1.5rem;
+
+    &:hover {
+        color: @black;
+    }
+}
+
+.consultation__input-title {
+    font-size: 1.2rem;
+    color: #3b3b3b;
+    line-height: 1.8;
+}
+
+/*============    АДРЕС    ===========*/
+
+.contacts {
+    background: url(../img/address-bg.png) no-repeat center;
+    background-size: cover;
+    padding-top: 5rem;
+    padding-bottom: 20rem;
+}
+
+.contacts__wrapper {
+    width: 45rem;
+    background-color: @red;
+    margin: 0 auto;
+    color: @white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contacts__title {
+    margin-top: 5.5rem;
+    font-size: 2.3rem;
+    .bold();
+    line-height: 1.2;
+}
+
+.contacts__address {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.contacts__phone {
+    margin-top: 3rem;
+    font-size: 1.9rem;
+    .bold();
+    line-height: 1.2;
+}
+
+.contacts__email {
+    margin-top: 3rem;
+    color: @white;
+    margin-bottom: 5.5rem;
+    transition: .2s linear;
+    font-size: 1.7rem;
+    line-height: 1.2;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+/*============    ПОДВАЛ    ===========*/
+
+.footer {
+    margin: 3rem 0;
+} 
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__phone-number {
+    color: @black;
+    .bold();
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.footer__phone-link {
+    font-size: 1.4rem;
+    text-decoration: underline;
+    color: @red;
+    text-align: right;
+    transition: .2 linear;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+/*============    	ВСПЛЫВАЮЩИЕ ОКНА    ===========*/
+
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: fade(@black, 60%);
+    position: fixed;
+
+    &.show {
+        display: flex;
+    }
+}
+
+.modal__dialog {
+    width: 100%;
+    max-width: 30rem;
+    margin: auto;
+    padding: 3.5rem 4.1rem;
+    background-color: @white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.modal__close {
+    position: absolute;
+    right: -15%;
+    top: -5%;
+    font-size: 3rem;
+    text-decoration: none;
+    color: @red;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.modal__order {
+    text-align: center;
+}
+
+.modal__order-title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.modal__suptitle {
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+.modal__button {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.2rem 4rem;
+    border-radius: 2.5rem;
+
+    &:hover {
+        color: @black;
+    }
+}
+
+.modal__order input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: rgb(103, 103, 103);
+    border: 1px solid rgb(208, 208, 208);
+}
+
+.modal__name {
+    margin-top: 1.7rem;
+    background: url(../img/user.png) no-repeat 94% 50%;
+}
+.modal__tel {
+    background: url(../img/phone.png) no-repeat 94% 50%;
+}
+.modal__mail {
+    background: url(../img/mail.png) no-repeat 94% 50%;
+}
+
+.modal__suptitle-thanks {
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.modal__order-title-thanks {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.modal__suptitle-quick {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+/*============    	АДАПТИВ    ===========*/
+
+@media(min-width:993px) and (max-width:1200px) {}
+
+@media(min-width:769px) and (max-width:992px) {
+    // Advantages //
+    .advantages__card {
+        margin-left: 5.1rem;
+    }
+
+    // Appplication //
+    .form-select {
+        width: auto;
+        padding: 1.3rem 5rem 1.3rem 1rem;
+    }
+    .application__form-second textarea,
+    .form-name,
+    .form-tel,
+    .form-email {
+        width: auto;
+    } 
+    .form-button {
+        width: auto;
+        padding: 1.2rem 4.5rem;
+    }
+
+    // Details //
+    .details__wrapper {
+        width: auto;
+    }
+
+    // Consultation //
+    .consultation input {
+        width: 26rem;
+    }
+}
+
+@media(min-width:481px) and (max-width:768px) {
+    // Main & header//
+    .header {
+        margin-bottom: 8rem;
+    }
+    .main__title {
+        font-size: 3.5rem;
+        line-height: 1.3;
+    }
+    .main__suptitle {
+        font-size: 2.2rem;
+    }
+    .header__phone-number {
+        font-size: 2.3rem;
+    }
+    .main__service {
+        margin-top: 3rem;
+        width: auto;
+        flex-wrap: wrap;
+    }
+    .main__service-card {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 5rem;
+        margin-left: 0;
+    }
+    .main__service-card:first-child {
+        margin-left: 0;
+    }
+    .main__button {
+        padding: 1.2rem 4rem;
+        width: 210px;
+    }
+
+    // Advantages //
+    .advantages__card {
+        margin-left: 5rem;
+    }
+
+    // Appplication //
+    .application__form-first,
+    .application__form-second,
+    .application__form-third {
+        width: 100%;
+    }
+    .form-title {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+    .form-select {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .application__form-second textarea {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .application input {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .form-button {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    // Details //
+    .details__wrapper {
+        width: auto;
+    }
+    .details__image {
+        width: 100%;
+    }
+    .details__title {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    // Aboutus //
+    .aboutus__wrapper {
+        text-align: center;
+    }
+    .aboutus__card {
+        width: 100%;
+        flex-direction: column;
+    }
+    .aboutus__title {
+        padding-top: 5rem;
+        font-size: 2.5rem;
+    }
+    .aboutus__card-suptitle {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .aboutus__card-text {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .aboutus__card-image {
+        margin: 0 auto;
+    }
+
+     // Consultation //
+    .consultation__input-wrapper {
+        flex-direction: column;
+    }
+    .consultation__input-title {
+        text-align: center;
+    }
+    .input-wrap-one,
+    .input-wrap-two {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .consultation__form-button {
+        margin-top: 1rem;
+    }
+
+    // Contacts //
+    .contacts__wrapper {
+        width: 30rem;
+    }
+
+    // Footer//
+    
+    .footer__phone-number {
+        font-size: 2.3rem;
+    }
+}
+
+@media(min-width:321px) and (max-width:480px) {
+    // Main & header//
+    .header {
+        margin-bottom: 8rem;
+    }
+    .main__title {
+        font-size: 2.6rem;
+        line-height: 1.3;
+    }
+    .main__suptitle {
+        font-size: 2.1rem;
+    }
+    .header__phone-number {
+        font-size: 2rem;
+    }
+    .header__phone-link {
+        font-size: 1.3rem;
+    }
+    .main__service {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        width: auto;
+        flex-wrap: wrap;
+    }
+    .main__service-card {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 5rem;
+        margin-left: 0;
+    }
+    .main__service-card:first-child {
+        margin-left: 0;
+    }
+    .main__buttons {
+        flex-direction: column;
+    }
+    .main__button {
+        width: 230px;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+    .main-button-text {
+        margin-top: 1rem;
+    }
+    // Advantages //
+    .advantages__card {
+        margin-left: 0;
+    }
+    // Appplication //
+    .application__form-wrapper {
+        padding: 3rem 3rem;
+    }
+    .application__title {
+        font-size: 2.5rem;
+    }
+    .application__form-first,
+    .application__form-second,
+    .application__form-third {
+        width: 100%;
+    }
+    .form-title {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+    .form-select {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        width: 18rem;
+        padding: 1.3rem 5rem 1.3rem 1.5rem;
+    }
+    .application__form-second textarea {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        width: 17.5rem;
+    }
+    .application input {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        width: 17.5rem;
+    }
+    .form-button {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .form-button {
+        width: auto;
+        padding: 1rem 5rem;
+    }
+
+    // Details //
+    .details__wrapper {
+        width: auto;
+    }
+    .details__image {
+        width: 100%;
+    }
+    .details__title {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    // Show //
+    .show__title {
+        font-size: 2.3rem;
+    }
+    .show__wrapper {
+        height: 200px;
+        margin-top: 4rem;
+    }
+    .show__video {
+        height: auto;
+    }
+
+    // Aboutus //
+    .aboutus__wrapper {
+        text-align: center;
+    }
+    .aboutus__card {
+        width: 100%;
+        flex-direction: column;
+    }
+    .aboutus__title {
+        padding-top: 5rem;
+        font-size: 2.5rem;
+    }
+    .aboutus__card-suptitle {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .aboutus__card-text {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .aboutus__card-image {
+        margin: 0 auto;
+    }
+
+    // Consultation //
+    .consultation {
+        padding: 3rem 0;
+    }
+    .consultation__form-wrapper {
+        padding: 3rem;
+        margin-top: 4rem;
+    }
+    .consultation__title {
+        font-size: 2.5rem;
+    }
+    .consultation__suptitle {
+        font-size: 1.4rem;
+    }
+    .consultation input {
+        width: auto;
+    }
+    .consultation__input-wrapper {
+        flex-direction: column;
+    }
+    .consultation__input-title {
+        text-align: center;
+    }
+    .input-wrap-one,
+    .input-wrap-two {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .consultation__form-button {
+        margin-top: 1rem;
+        padding: 1rem;
+        width: 17rem;
+        font-size: 1.2rem
+    }
+
+    // Contacts //
+    .contacts {
+        padding-top: 7rem;
+        padding-bottom: 14rem;
+    }
+    .contacts__wrapper {
+        width: 25rem;
+    }
+    .contacts__title {
+        font-size: 2.2rem;
+        margin-top: 3rem;
+    }
+    .contacts__address {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .contacts__phone {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+    }
+    .contacts__email {
+        margin-top: 2.3rem;
+        margin-bottom: 4rem;
+    }
+    
+    // Footer //
+    
+    .footer__phone-number {
+        font-size: 2rem;
+    }
+    .footer__phone-link {
+        font-size: 1.3rem;
+    }
+
+    // Modal //
+    .modal__dialog {
+        padding: 2rem 3rem;
+        max-width: 25rem;
+        width: 90%;
+    }
+    .modal__dialog input {
+        width: auto;
+    }
+    .modal__button {
+        width: auto;
+        padding: 1rem 3rem;
+    }
+    .modal__suptitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media(min-width:0px) and (max-width:320px) {
+    // Main & header//
+    .header {
+        margin-bottom: 8rem;
+    }
+    .main__title {
+        font-size: 2.6rem;
+        line-height: 1.3;
+    }
+    .main__suptitle {
+        font-size: 2.1rem;
+    }
+    .header__phone-number {
+        font-size: 1.8rem;
+        text-align: right;
+    }
+    .header__phone-link {
+        font-size: 1.2rem;
+    }
+    .main__service {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        width: auto;
+        flex-wrap: wrap;
+    }
+    .main__service-card {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 5rem;
+        margin-left: 0;
+    }
+    .main__service-card:first-child {
+        margin-left: 0;
+    }
+    .main__buttons {
+        flex-direction: column;
+    }
+    .main__button {
+        width: 230px;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+    .main-button-text {
+        margin-top: 1rem;
+    }
+     // Advantages //
+    .advantages__card {
+        margin-left: 0;
+    }
+    
+    // Appplication //
+    .application__form-wrapper {
+        padding: 3rem 3rem;
+    }
+    .application__title {
+        font-size: 2.5rem;
+    }
+    .application__form-first,
+    .application__form-second,
+    .application__form-third {
+        width: 100%;
+    }
+    .form-title {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+    .form-select {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        width: 18rem;
+        padding: 1.3rem 5rem 1.3rem 1.5rem;
+    }
+    .application__form-second textarea {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        width: 17.5rem;
+    }
+    .application input {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        width: 17.5rem;
+    }
+    .form-button {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .form-button {
+        width: auto;
+        padding: 1rem 5rem;
+    }
+
+    // Details //
+    .details__wrapper {
+        width: auto;
+    }
+    .details__image {
+        width: 100%;
+    }
+    .details__title {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    // Show //
+    .showcar {
+        margin-top: 3rem;
+    }
+    .show__title {
+        font-size: 2.1rem;
+    }
+    .show__wrapper {
+        padding: 0.5rem;
+        height: 200px;
+        margin-top: 4rem;
+    }
+    .show__video {
+        height: 100%;
+    }
+
+    // Aboutus //
+    .aboutus__wrapper {
+        text-align: center;
+    }
+    .aboutus__card {
+        width: 100%;
+        flex-direction: column;
+    }
+    .aboutus__title {
+        padding-top: 5rem;
+        font-size: 2.5rem;
+    }
+    .aboutus__card-suptitle {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .aboutus__card-text {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .aboutus__card-image {
+        margin: 0 auto;
+    }
+
+    // Consultation //
+    .consultation {
+        padding: 3rem 0;
+    }
+    .consultation__form-wrapper {
+        padding: 3rem;
+        margin-top: 4rem;
+    }
+    .consultation__title {
+        font-size: 2.5rem;
+    }
+    .consultation__suptitle {
+        font-size: 1.4rem;
+    }
+    .consultation input {
+        width: auto;
+        padding: 1rem 0;
+    }
+    .consultation__input-wrapper {
+        flex-direction: column;
+    }
+    .consultation__input-title {
+        text-align: center;
+    }
+    .input-wrap-one,
+    .input-wrap-two {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .consultation__form-button {
+        margin-top: 1rem;
+        padding: 1rem;
+        width: 17rem;
+        font-size: 1.2rem
+    }
+
+    // Contacts //
+    .contacts {
+        padding-top: 7rem;
+        padding-bottom: 14rem;
+    }
+    .contacts__wrapper {
+        width: 25rem;
+    }
+    .contacts__title {
+        font-size: 2.2rem;
+        margin-top: 3rem;
+    }
+    .contacts__address {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .contacts__phone {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+    }
+    .contacts__email {
+        margin-top: 2.3rem;
+        margin-bottom: 4rem;
+    }
+
+    // Footer//
+    .footer__phone-number {
+        font-size: 1.8rem;
+        text-align: right;
+    }
+    .footer__phone-link {
+        font-size: 1.2rem;
+    }
+
+
+    // Modal //
+    .modal__dialog {
+        padding: 2rem 3rem;
+        max-width: 25rem;
+        width: 90%;
+    }
+    .modal__dialog input {
+        width: auto;
+    }
+    .modal__button {
+        width: auto;
+        padding: 1rem 3rem;
+    }
+    .modal__suptitle {
+        font-size: 1.2rem;
+    }
+    .modal__close {
+        right: -1%;
+        top: -2%;
+    }
+}
+
+
+
+
+
+
+
+
